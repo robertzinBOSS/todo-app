@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8' />
+    <link href='/assets/svgs/vite.svg' rel='icon' type='image/svg+xml' />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <title>Todo App</title>
+</head>
+<body>
+<div
+    class='font-josefin-sans min-h-screen bg-very-light-gray-light dark:bg-very-dark-blue-dark'
+    id='root'
+></div>
+<script>
+    (function() {
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme && savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    })();
+</script>
+<script src='/src/main.tsx' type='module'></script>
+</body>
+</html>
